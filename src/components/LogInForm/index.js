@@ -3,7 +3,6 @@ import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
 
 import './index.css'
-// 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
 
 class LogInForm extends Component {
   state = {
