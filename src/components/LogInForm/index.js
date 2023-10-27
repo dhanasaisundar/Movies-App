@@ -3,6 +3,7 @@ import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
 
 import './index.css'
+// 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
 
 class LogInForm extends Component {
   state = {
@@ -63,7 +64,7 @@ class LogInForm extends Component {
         <input
           type="password"
           id="password"
-          className="password-input-field"
+          className="input-field"
           value={password}
           onChange={this.onChangePassword}
         />
@@ -81,7 +82,7 @@ class LogInForm extends Component {
         <input
           type="text"
           id="username"
-          className="username-input-field"
+          className="input-field"
           value={username}
           onChange={this.onChangeUsername}
         />
@@ -97,14 +98,19 @@ class LogInForm extends Component {
     }
     return (
       <div className="login-form-container">
+        <img
+          src="https://res.cloudinary.com/dq6ad18dk/image/upload/v1698415386/Group_7399-removebg-preview_1_xdmayi.png"
+          alt="movies"
+          className="movies-background"
+        />
         <form className="form-container" onSubmit={this.submitForm}>
           <h1 className="login-heading">Login</h1>
           <div className="input-container">{this.renderUsernameField()}</div>
           <div className="input-container">{this.renderPasswordField()}</div>
+          {showSubmitError && <p className="error-message">*{errorMsg}</p>}
           <button type="submit" className="login-button">
             Login
           </button>
-          {showSubmitError && <p className="error-message">*{errorMsg}</p>}
         </form>
       </div>
     )
