@@ -2,7 +2,7 @@ import {Component} from 'react'
 import {Switch, Route} from 'react-router-dom'
 
 import LogInForm from './components/LogInForm'
-import home form '.component/Home'
+import home form './components/Home'
 import './App.css'
 
 class App extends Component {
